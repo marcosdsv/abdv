@@ -75,7 +75,7 @@ include_once("menu.php");
                 </select>
             </div>
         </div>
-        <div class="form-group row">
+        <div class="form-group">
             <div class="col-sm-12 text-center">
                 <input class="btn btn-secondary" type="button" value="Cancelar">
                 <input class="btn btn-primary" type="submit" value="Salvar">

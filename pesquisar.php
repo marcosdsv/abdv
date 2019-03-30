@@ -4,16 +4,21 @@ include_once "sessao.php";
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-<meta charset="UTF-8"/>
-<title>ABDV Pesquisa de associados</title>
+    <meta charset="UTF-8"/>
+    <title>ABDV Pesquisa de associados</title>
+    <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/form.css">
 </head>
 <body>
-<form method="POST" action="visualizar2.php">
-<input type="search" autofocus name="pesquisa" placeholder="Digite o cpf"><br>
-<input type="search" autofocus name="pesquisa" placeholder="Digite o e-mail"><br>
-<input type="submit" value="Pesquisar">
-</form>
-<a href="cadastro.php">Cadastrar associado</a><br>
-<a href="menu.php">Voltar ao menu</a>
+<?php
+include_once("menu.php");
+?>
+<div class="m-4">
+    <form method="POST" action="visualizar2.php" class="form w-25 p-4">
+        <input class="form-control" type="search" autofocus name="pesquisa" placeholder="Digite o cpf"><br>
+        <input class="form-control" type="search" autofocus name="pesquisa" placeholder="Digite o e-mail"><br>
+        <input class="form-control" type="submit" value="Pesquisar">
+    </form>
+</div>
 </body>
 </html>
