@@ -13,4 +13,4 @@ CREATE TABLE login(id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
 email VARCHAR(100) NOT NULL,
 senha VARCHAR(20) NOT NULL);
 
-INSERT INTO login(email, senha) VALUES ('marcos.dsv23@gmail.com', 'MAR9252COS8566');
+INSERT INTO login(email, senha) VALUES ('admin@email.com', '1234');
