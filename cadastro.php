@@ -1,7 +1,4 @@
-﻿<?php
-require_once "sessao.php";
-?>
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8"/>

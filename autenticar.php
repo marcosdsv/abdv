@@ -1,6 +1,4 @@
 ﻿<?php
-//inicia sessão.
-session_start();
 $email = filter_input(INPUT_POST,"email");
 $senha = filter_input(INPUT_POST,"senha");
 //estabelecendo conexão com o banco de dados.
