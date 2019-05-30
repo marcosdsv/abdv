@@ -3,6 +3,7 @@
 $nome = filter_input(INPUT_POST,"nome");
 $endereco = filter_input(INPUT_POST,"endereco");
 $telefone = filter_input(INPUT_POST,"telefone");
+$celular = filter_input(INPUT_POST,"celular");
 $rg = filter_input(INPUT_POST,"rg");
 $cpf = filter_input(INPUT_POST,"cpf");
 $email = filter_input(INPUT_POST,"email");
@@ -23,7 +24,7 @@ if($logarray == $cpf){
 	
 }else{
 //Inserindo os registros pegado pelas variáveis do form cadastro.php.
-$sql = "INSERT INTO associados(nome, endereco, telefone, rg, cpf, email, trabalha, tipo) VALUES ('$nome', '$endereco', '$telefone', '$rg', '$cpf', '$email', '$trabalha', '$tipo')";
+$sql = "INSERT INTO associados(nome, endereco, telefone, celular, rg, cpf, email, trabalha, tipo) VALUES ('$nome', '$endereco', '$telefone', '$celular', '$rg', '$cpf', '$email', '$trabalha', '$tipo')";
 $registros = mysqli_query($conn, $sql);
 
 if($registros){

@@ -4,6 +4,7 @@ $id = filter_input(INPUT_GET,"id");
 $nome = filter_input(INPUT_POST,"nome");
 $endereco = filter_input(INPUT_POST,"endereco");
 $telefone = filter_input(INPUT_POST,"telefone");
+$celular = filter_input(INPUT_POST,"celular");
 $rg = filter_input(INPUT_POST,"rg");
 $cpf = filter_input(INPUT_POST,"cpf");
 $email = filter_input(INPUT_POST,"email");
@@ -11,7 +12,7 @@ $trabalha = filter_input(INPUT_POST,"trabalha");
 $tipo = filter_input(INPUT_POST,"tipo");
 //inserindo arquivo de conexão com o banco.
 include_once "conectar.php";
-$sql = "UPDATE associados SET nome= '$nome', endereco= '$endereco', telefone= '$telefone', rg= '$rg', cpf= '$cpf', email= '$email', trabalha= '$trabalha', tipo= '$tipo'";
+$sql = "UPDATE associados SET nome= '$nome', endereco= '$endereco', telefone= '$telefone', celular= '$celular', rg= '$rg', cpf= '$cpf', email= '$email', trabalha= '$trabalha', tipo= '$tipo'";
 //executa a query do sql.
 if(mysqli_query($conn, $sql)){
 	print "<script>";

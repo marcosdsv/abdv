@@ -28,6 +28,7 @@ include_once("menu.php");
 $pesquisa = filter_input(INPUT_POST,"pesquisa");
 //incluindo o arquivo de conexão.
 include_once "conectar.php";
+
 	
 //variável que pega as informações do banco.
 $sql = "SELECT * FROM associados WHERE cpf like '%$pesquisa%';";
@@ -58,7 +59,6 @@ if(mysqli_num_rows($resultado)){
 		<?php
 	}
 }
-
 ?>
 </table>
 </body>

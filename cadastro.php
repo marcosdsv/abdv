@@ -1,10 +1,13 @@
-﻿<!DOCTYPE html>
+﻿<?php
+include_once "sessao.php";
+?>
+<!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8"/>
     <title>ABDV Cadastro de Associados</title>
-    <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="./css/form.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/form.css">
 </head>
 <body>
 <?php
@@ -31,6 +34,12 @@ include_once("menu.php");
                 <input class="form-control" type="text" name="telefone" id="telefone" required placeholder="Digite o número do telefone">
             </div>
         </div>
+		<div class="form-group row">
+            <label for="celular" class="col-sm-2 col-form-label">Celular: </label>
+            <div class="col-sm-10">
+                <input class="form-control" type="text" name="celular" id="celular" required placeholder="Digite o número do celular">
+            </div>
+        </div>
         <div class="form-group row">
             <label for="rg" class="col-sm-2 col-form-label">RG:</label>
             <div class="col-sm-10">
@@ -52,7 +61,7 @@ include_once("menu.php");
         <div class="form-group row">
             <label for="trabalha" class="col-sm-2 col-form-label">Trabalha:</label>
             <div class="col-sm-10">
-                <select name="trabalha" class="form-control">
+                <select name="trabalha" class="form-control" id="trabalha">
                     <option>...</option>
                     <option>Sim</option>
                     <option>Não</option>
@@ -62,17 +71,18 @@ include_once("menu.php");
         <div class="form-group row">
             <label for="tipo" class="col-sm-2 col-form-label">Profissão:</label>
             <div class="col-sm-10">
-                <select name="tipo" class="form-control">
+                <select name="tipo" class="form-control" id="tipo">
                     <option>...</option>
-                    <option>Empresa privada</option>
-                    <option>Empresa pública</option>
+                    <option>Empresa Privada</option>
+                    <option>Empresa Pública</option>
                     <option>Auxilio doença</option>
                     <option>BPC</option>
                     <option>Aposentado</option>
+					<option>Não tem trabalho</option>
                 </select>
             </div>
         </div>
-        <div class="form-group">
+        <div class="form-group row">
             <div class="col-sm-12 text-center">
                 <input class="btn btn-secondary" type="button" value="Cancelar">
                 <input class="btn btn-primary" type="submit" value="Salvar">
