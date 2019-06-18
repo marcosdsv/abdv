@@ -69,11 +69,41 @@ $array = mysqli_fetch_assoc($resultado);
                 <input class="form-control" type="email" name="email" value="<?=$array['email']?>" id="email" required placeholder="Digite o E-mail">
             </div>
         </div>
+		<div class="form-group row">
+            <label for="datanascimento" class="col-sm-2 col-form-label">Data de nascimento:</label>
+            <div class="col-sm-10">
+                <input class="form-control" type="date" name="datanascimento" value="<?=$array['datanascimento']?>" id="datanascimento" required>
+            </div>
+        </div>
+		<div class="form-group row">
+            <label for="tipodeficiencia" class="col-sm-2 col-form-label">Tipo de deficiência:</label>
+            <div class="col-sm-10">
+                <select name="tipodeficiencia" class="form-control" id="tipodeficiencia">
+                    <option>...</option>
+                    <option>Total</option>
+                    <option>Parcial</option>
+					<option>Subnormal</option>
+					<option>Não possui deficiência</option>
+                </select>
+            </div>
+        </div>
+		<div class="form-group row">
+            <label for="tipoassociado" class="col-sm-2 col-form-label">Tipo de associado:</label>
+            <div class="col-sm-10">
+                <select name="tipoassociado" class="form-control" id="tipoassociado">
+                    <option>...</option>
+                    <option>Fundador</option>
+                    <option>Benemérito</option>
+					<option>Honorário</option>
+					<option>Colaborador</option>
+                </select>
+            </div>
+        </div>
         <div class="form-group row">
             <label for="trabalha" class="col-sm-2 col-form-label">Trabalha:</label>
             <div class="col-sm-10">
                 <select name="trabalha" class="form-control" id="trabalha">
-                    <option>...</option>
+                    <option></option>
                     <option>Sim</option>
                     <option>Não</option>
                 </select>
@@ -83,13 +113,13 @@ $array = mysqli_fetch_assoc($resultado);
             <label for="tipo" class="col-sm-2 col-form-label">Profissão:</label>
             <div class="col-sm-10">
                 <select name="tipo" class="form-control" id="tipo">
-                    <option>...</option>
+                    <option></option>
                     <option>Empresa Privada</option>
                     <option>Empresa Pública</option>
                     <option>Auxilio doença</option>
                     <option>BPC</option>
                     <option>Aposentado</option>
-					<option>Não tem trabalho</option>
+					<option>Não trabalha</option>
                 </select>
             </div>
         </div>

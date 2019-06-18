@@ -1,8 +1,6 @@
 ﻿<?php
 include_once "sessao.php";
 ?>
-
-<td>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -10,9 +8,6 @@ include_once "sessao.php";
 	<title>ABDV Usuários cadastrados</title>
 </head>
 <body>
-<?php
-include_once "menu.php";
-?>
 <table border=2>
 <caption>Tabela de associados</caption>
 <tr>
@@ -77,5 +72,6 @@ $tipo = ucwords(strtolower($dados['tipo']));
 }
 ?>
 </table>
+
 </body>
 </html>

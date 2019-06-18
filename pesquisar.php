@@ -11,17 +11,30 @@ include_once "sessao.php";
 </head>
 <body>
 <?php
-include_once("menu.php");
+include_once "menu.php";
 ?>
 <div class="m-4">
     <form method="POST" action="visualizar2.php" autocomplete="off" class="form w-50 p-4">
         <h2 class="text-center m-2">Pesquisa de associados</h2>
         <div class="form-group row">
-            <label for="cpf" class="col-sm-2 col-form-label">CPF:</label>
+            <label for="nome" class="col-sm-2 col-form-label">Nome:</label>
             <div class="col-sm-10">
-                <input class="form-control" type="search" name="pesquisa" id="cpf" placeholder="Digite o cpf para pesquisa">
+                <input class="form-control" type="search" name="nome" id="nome" placeholder="Digite o nome para pesquisa">
             </div>
         </div>
+        <div class="form-group row">
+            <label for="email" class="col-sm-2 col-form-label">E-mail:</label>
+            <div class="col-sm-10">
+                <input class="form-control" type="search" name="email" id="email" placeholder="Digite o e-mail para pesquisa">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="cpf" class="col-sm-2 col-form-label">CPF:</label>
+            <div class="col-sm-10">
+                <input class="form-control" type="search" name="cpf" id="cpf" placeholder="Digite o cpf para pesquisa">
+            </div>
+        </div>
+
         <div class="form-group row">
             <div class="col-sm-12 text-center">
                 <input class="btn btn-primary" type="submit" value="Pesquisar">
@@ -29,5 +42,6 @@ include_once("menu.php");
         </div>
     </form>
 </div>
+
 </body>
 </html>

@@ -1,13 +1,11 @@
-function cadastro(){
-window.location.href="cadastro.php";
+function imprimir(){
+
+var imprimir = window.print();
+alert(imprimir);
 }
-function visualizar(){
+function cancelar(){
+var cancelar = confirm("Tem serteza que deseja cancelar o cadastro?, pressione enter para continuar");
+if(cancelar == '1'){
 window.location.href="visualizar.php";
 }
-function pesquisar(){
-window.location.href="pesquisar.php";
-}
-function sair(){
-window.location.href="?sair=ok";
-return confirm("Deseja sair do sistema?");
 }

@@ -6,6 +6,7 @@ include_once("sessao.php");
 <head>
 <meta charset="UTF-8"/>
 <link rel="stylesheet" type="text/css" href="css/marcador.css">
+<script src="js.js"></script>
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -25,6 +26,9 @@ include_once("sessao.php");
 						</li>
             <li class="nav-item">
                 <a class="nav-link" href="?sair=ok" onclick="return confirm('Deseja sair do sistema?')">Sair</a>
+				</li>
+            <li class="nav-item">
+                <a class="nav-link" href="#" onclick="imprimir()">Imprimir</a>
 				</li>
         </ul>
     </div>

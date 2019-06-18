@@ -1,6 +1,8 @@
 ﻿<?php
+//inserindo arquivo de sessão.
+include_once "sessao.php";
 //buscando o valor do parametro id.
-$id = filter_input(INPUT_POST,"id");
+$id = filter_input(INPUT_GET,"id");
 //incluindo arquivo de conexão no banco.
 include_once "conectar.php";
 //selecionando registro para excluir.
