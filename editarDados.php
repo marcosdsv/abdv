@@ -13,10 +13,10 @@ include_once("sessao.php");
 <?php
 //inserindo arquivo do menu
 include_once("menu.php");
-//buscando o valor do id pelo parametro.
-$id = filter_input(INPUT_GET,"id");
 //incluíndo o arquivo de conexão do banco.
 include_once "conectar.php";
+//buscando o valor do id pelo parametro.
+$id = filter_input(INPUT_GET,"id");
 //armazenando o id na variável.
 $sql = "SELECT * FROM associados WHERE id='$id'";
 //executa o id do banco.
@@ -119,7 +119,7 @@ $array = mysqli_fetch_assoc($resultado);
                     <option>Auxilio doença</option>
                     <option>BPC</option>
                     <option>Aposentado</option>
-					<option>Não trabalha</option>
+					<option>Não tem trabalho</option>
                 </select>
             </div>
         </div>

@@ -59,7 +59,7 @@ $resultado = mysqli_query($conn, $sql);
 }
 
 //Enquanto estiver buscando registro na variável.
-	while($dados = mysqli_fetch_assoc($resultado)){
+while($dados = mysqli_fetch_assoc($resultado)){
 $nome = ucwords(strtolower($dados['nome']));
 $endereco = ucwords(strtolower($dados['endereco']));
 $tel = $dados['telefone'];
@@ -106,10 +106,11 @@ $tipo = ucwords(strtolower($dados['tipo']));
 		onclick="return confirm('Confirma a exclusão desse registro?')">Excluir</a>
 		</td>
 		</tr>
+</tbody>
 		<?php
 }
 ?>
-</tbody>
+
 </table>
 </body>
 </html>
