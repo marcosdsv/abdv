@@ -1,27 +1,37 @@
-﻿<!DOCTYPE html>
+﻿<?php
+include_once "sessao.php";
+?>
+<!DOCTYPE html>
 <html lang="pt-br">
 <head>
 	<meta charset="UTF-8"/>
 	<title>Usuários cadastrados</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/form.css">
 </head>
 <body>
-<table border=2>
+<?php
+include_once "menu.php";
+?>
+<table class="table">
 <caption>Tabela de associados</caption>
+<thead>
 <tr>
-<th>Nome</th>
-<th>Endereço</th>
-<th>Telefone</th>
-<th>Celular</th>
-<th>RG</th>
-<th>CPF</th>
-<th>E-mail</th>
-<th>Data de nascimento</th>
-<th>Tipo de deficiência</th>
-<th>Tipo de associado</th>
-<th>Trabalha</th>
-<th>Profição</th>
-<th>Ação</th>
+<th scope="col">Nome</th>
+<th scope="col">Endereço</th>
+<th scope="col">Telefone</th>
+<th scope="col">Celular</th>
+<th scope="col">RG</th>
+<th scope="col">CPF</th>
+<th scope="col">E-mail</th>
+<th scope="col">Data de nascimento</th>
+<th scope="col">Tipo de deficiência</th>
+<th scope="col">Tipo de associado</th>
+<th scope="col">Trabalha</th>
+<th scope="col">Profição</th>
+<th scope="col">Ação</th>
 </tr>
+</thead>
 <?php
 //$pesquisa = filter_input(INPUT_POST,"pesquisa");
 $nome = filter_input(INPUT_POST,"nome");
@@ -76,6 +86,7 @@ $tipoassociado = ucwords(strtolower($dados['tipoassociado']));
 $trabalha = ucwords(strtolower($dados['trabalha']));
 $tipo = ucwords(strtolower($dados['tipo']));
 ?>
+<tbody>
 <tr>
 <td><?php echo $nome;?></td>
 <td><?php echo $endereco;?></td>
@@ -96,10 +107,9 @@ $tipo = ucwords(strtolower($dados['tipo']));
 		</td>
 		</tr>
 		<?php
-	
 }
-
 ?>
+</tbody>
 </table>
 </body>
 </html>

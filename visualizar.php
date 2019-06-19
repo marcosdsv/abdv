@@ -1,36 +1,42 @@
 ﻿<?php
 include_once "sessao.php";
 ?>
-
-<td>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
 	<meta charset="UTF-8"/>
 	<title>ABDV Usuários cadastrados</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="css/form.css">
 </head>
 <body>
+<div id="menu" style="display: block">
 <?php
 include_once "menu.php";
 ?>
-<table border=2>
+</div>
+<!--<div id="container">-->
+<table class="table">
 <caption>Tabela de associados</caption>
+<thead>
 <tr>
-<th>Nome</th>
-<th>Endereço</th>
-<th>Telefone</th>
-<th>Celular</th>
-<th>RG</th>
-<th>CPF</th>
-<th>E-mail</th>
-<th>Data de nascimento</th>
-<th>Tipo de deficiência</th>
-<th>Tipo de associado</th>
-<th>Trabalha</th>
-<th>Profição</th>
+<th scope="col">Nome</th>
+<th scope="col">Endereço</th>
+<th scope="col">Telefone</th>
+<th scope="col">Celular</th>
+<th scope="col">RG</th>
+<th scope="col">CPF</th>
+<th scope="col">E-mail</th>
+<th scope="col">Data de nascimento</th>
+<th scope="col">Tipo de deficiência</th>
+<th scope="col">Tipo de associado</th>
+<th scope="col">Trabalha</th>
+<th scope="col">Profição</th>
 </tr>
+</thead>
 <?php
-$conn = new mysqli('localhost', 'root', '', 'abdv');
+//inserindo o arquivo de conexao.
+include_once "conectar.php";
 $sql = "select * from associados order by nome asc";
 $resultado = mysqli_query($conn, $sql);
 while($dados = mysqli_fetch_assoc($resultado)){
@@ -60,6 +66,7 @@ $tipoassociado = ucwords(strtolower($dados['tipoassociado']));
 $trabalha = ucwords(strtolower($dados['trabalha']));
 $tipo = ucwords(strtolower($dados['tipo']));
 ?>
+<tbody>
 <tr>
 <td><?php echo $nome;?></td>
 <td><?php echo $endereco;?></td>
@@ -76,6 +83,8 @@ $tipo = ucwords(strtolower($dados['tipo']));
 <?php
 }
 ?>
+</tbody>
 </table>
+<!--</div>-->
 </body>
 </html>
