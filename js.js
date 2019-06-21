@@ -1,5 +1,4 @@
 function imprimir(){
-
 var imprimir = window.print();
 alert(imprimir);
 }
@@ -8,4 +7,11 @@ var cancelar = confirm("Tem serteza que deseja cancelar o cadastro?, pressione e
 if(cancelar == '1'){
 window.location.href="visualizar.php";
 }
+}
+function trabalha(){
+var trabalha = document.getElementById("sim").selected;
+
+alert(trabalha);
+
+
 }

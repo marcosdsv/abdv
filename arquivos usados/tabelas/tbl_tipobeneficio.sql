@@ -1,0 +1,4 @@
+CREATE TABLE tipobeneficio(
+id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+tipobeneficio VARCHAR(60) NOT NULL
+);

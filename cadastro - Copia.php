@@ -101,53 +101,33 @@ while($dados2 = mysqli_fetch_assoc($query)){
                 </select>
             </div>
         </div>
-
         <div class="form-group row">
             <label for="trabalha" class="col-sm-2 col-form-label">Trabalha:</label>
             <div class="col-sm-10">
-<select name="trabalha" class="form-control" id="trabalha" onkeyup="trabalha()">
-<option value="0"></option>
-<option id="sim" value="sim">Sim</option>
-<option id="não" value="não">Não</option>
+                <select name="trabalha" class="form-control" id="trabalha">
+                    <option value="0"></option>
+                    <option value="Sim">Sim</option>
+                    <option value="Não">Não</option>
                 </select>
             </div>
         </div>
-
-        <div class="form-group row" style="display: block">
-            <label for="tipocargo" class="col-sm-2 col-form-label">Profição:</label>
+        <div class="form-group row">
+            <label for="tipo" class="col-sm-2 col-form-label">Tipo de Órgão:</label>
             <div class="col-sm-10">
-                <select name="tipocargo" class="form-control" id="tipocargo">
+                <select name="tipo" class="form-control" id="tipo">
                     <option value="0"></option>
-<?php
-$tipocargo = "SELECT * FROM tipocargo";
-$resultadocargo = mysqli_query($conn, $tipocargo);
-while($cargo = mysqli_fetch_assoc($resultadocargo)){
-?>
-<option value="<?php echo $cargo['tipocargo'];?>"><?php echo $cargo['tipocargo'];?></option>
-<?php
-}
-?>
+                    <option value="Empresa Privada">Empresa Privada</option>
+                    <option value="Empresa Pública">Empresa Pública</option>
 </select>
 </div>
 </div>
-
-        <div class="form-group row" style="display: none">
-            <label for="tipobeneficio" class="col-sm-2 col-form-label">Tipo de beneficio:</label>
-            <div class="col-sm-10">
-                <select name="tipobeneficio" class="form-control" id="tipobeneficio">
-                    <option value="0"></option>
-<?php
-$tipobeneficio = "SELECT * FROM tipobeneficio";
-$resultadobeneficio = mysqli_query($conn, $tipobeneficio);
-while($beneficio = mysqli_fetch_assoc($resultadobeneficio)){
-?>
-<option value="<?php echo $beneficio['tipobeneficio'];?>"><?php echo $beneficio['tipobeneficio'];?></option>
-<?php
-}
-?>
-</select>
-</div>
-</div>
+<!--                    <option value="Auxilio doença">Auxilio doença</option>-->
+<!--                    <option value="BPC">BPC</option>-->
+<!--                    <option value="Aposentado">Aposentado</option>-->
+<!--					<option value="Não trabalha">Não trabalha</option>-->
+<!--                </select>-->
+<!--            </div>-->
+<!--        </div>-->
         <div class="form-group row">
             <div class="col-sm-12 text-center">
                 <input class="btn btn-secondary" type="button" value="Cancelar" onclick="cancelar()">

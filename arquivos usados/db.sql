@@ -7,10 +7,10 @@ rg VARCHAR(14) NOT NULL UNIQUE,
 cpf VARCHAR(11) NOT NULL UNIQUE,
 email VARCHAR(100) NOT NULL,
 datanascimento DATE NULL,
-fk_tipodeficiencia VARCHAR(22) NOT NULL,
-fk_tipoassociado VARCHAR(11) NOT NULL,
+tipodeficiencia VARCHAR(22) NOT NULL,
+tipoassociado VARCHAR(11) NOT NULL,
 trabalha VARCHAR(3) NOT NULL,
-fk_tipo VARCHAR(15) NOT NULL
+tipo VARCHAR(40) NULL
 );
 
 CREATE TABLE tipodeficiencia(
