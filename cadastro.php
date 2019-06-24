@@ -15,61 +15,41 @@ include_once "conectar.php";
 <?php
 include_once("menu.php");
 ?>
-<div class="m-4">
-    <form method="POST" action="validar.php" autocomplete="off" class="form w-50 p-4">
+    <form method="POST" action="validar.php" autocomplete="off">
         <h2 class="text-center m-2">Cadastro de associados</h2>
-        <div class="form-group row">
-            <label for="nome" class="col-sm-2 col-form-label">Nome: </label>
-            <div class="col-sm-10">
-                <input class="form-control" type="text" name="nome" id="nome" autofocus required placeholder="Digite nome completo">
+            <label for="nome">Nome: </label>
+                <input type="text" name="nome" id="nome" autofocus required placeholder="Digite nome completo">
+                        
+                <input type="text" name="endereco" id="endereco" required placeholder="Digite o endereço">
             </div>
         </div>
         <div class="form-group row">
-            <label for="endereco" class="col-sm-2 col-form-label">Endereço: </label>
-            <div class="col-sm-10">
-                <input class="form-control" type="text" name="endereco" id="endereco" required placeholder="Digite o endereço">
-            </div>
-        </div>
-        <div class="form-group row">
-            <label for="telefone" class="col-sm-2 col-form-label">Telefone: </label>
-            <div class="col-sm-10">
-                <input class="form-control" type="text" name="telefone" id="telefone" required placeholder="Digite o número do telefone">
+            <label for="telefone" ">Telefone: </label>
+            
+                <input type="text" name="telefone" id="telefone" required placeholder="Digite o número do telefone">
             </div>
         </div>
 		<div class="form-group row">
-            <label for="celular" class="col-sm-2 col-form-label">Celular: </label>
-            <div class="col-sm-10">
-                <input class="form-control" type="text" name="celular" id="celular" required placeholder="Digite o número do celular">
-            </div>
-        </div>
-        <div class="form-group row">
-            <label for="rg" class="col-sm-2 col-form-label">RG:</label>
-            <div class="col-sm-10">
-                <input class="form-control" type="text" name="rg" id="rg" required placeholder="Digite o RG">
-            </div>
-        </div>
-        <div class="form-group row">
-            <label for="cpf" class="col-sm-2 col-form-label">CPF:</label>
-            <div class="col-sm-10">
-                <input class="form-control" type="text" name="cpf" id="cpf" required placeholder="Digite o CPF">
-            </div>
-        </div>
-        <div class="form-group row">
-            <label for="email" class="col-sm-2 col-form-label">E-mail:</label>
-            <div class="col-sm-10">
-                <input class="form-control" type="email" name="email" id="email" required placeholder="Digite o E-mail">
-            </div>
-        </div>
-		<div class="form-group row">
-            <label for="datanascimento" class="col-sm-2 col-form-label">Data de nascimento:</label>
-            <div class="col-sm-10">
-                <input class="form-control" type="date" name="datanascimento" id="datanascimento" required>
-            </div>
-        </div>
-        <div class="form-group row">
-            <label for="tipodeficiencia" class="col-sm-2 col-form-label">Tipo de deficiência:</label>
-			<div class="col-sm-10">
-                <select name="tipodeficiencia" class="form-control" id="tipodeficiencia">
+            <label for="celular" ">Celular: </label>
+            
+                <input type="text" name="celular" id="celular" required placeholder="Digite o número do celular">
+        
+            <label for="rg">RG:</label>
+                <input type="text" name="rg" id="rg" required placeholder="Digite o RG">
+
+            <label for="cpf" ">CPF:</label>
+                <input type="text" name="cpf" id="cpf" required placeholder="Digite o CPF">
+            
+        
+        
+            <label for="email" ">E-mail:</label>
+                        <input  type="email" name="email" id="email" required placeholder="Digite o E-mail">
+            
+        <label for="datanascimento" ">Data de nascimento:</label>
+                           <input type="date" name="datanascimento" id="datanascimento" required>
+            
+            <label for="tipodeficiencia" ">Tipo de deficiência:</label>
+                <select name="tipodeficiencia" id="tipodeficiencia">
                     <option value="0"></option>
 					<?php
 					$sql = "SELECT * FROM tipodeficiencia";
@@ -81,12 +61,11 @@ include_once("menu.php");
 					}
 					?>
                 </select>
-            </div>
-        </div>
-        <div class="form-group row">
-            <label for="tipoassociado" class="col-sm-2 col-form-label">Tipo de associado:</label>
-            <div class="col-sm-10">
-                <select name="tipoassociado" class="form-control" id="tipoassociado">
+          
+        
+        
+            <label for="tipoassociado" ">Tipo de associado:</label>
+                           <select name="tipoassociado" id="tipoassociado">
                     <option value="0"></option>
 					<?php
 					$tipoassociado = "SELECT * FROM tipoassociado";
@@ -99,24 +78,18 @@ while($dados2 = mysqli_fetch_assoc($query)){
 }
 ?>
                 </select>
-            </div>
-        </div>
+            
 
-        <div class="form-group row">
-            <label for="trabalha" class="col-sm-2 col-form-label">Trabalha:</label>
-            <div class="col-sm-10">
-<select name="trabalha" class="form-control" id="trabalha" onkeyup="trabalha()">
+            <label for="trabalha" ">Trabalha:</label>
+<select name="trabalha" id="trabalha" onkeyup="escolhertrabalho()">
 <option value="0"></option>
-<option id="sim" value="sim">Sim</option>
-<option id="não" value="não">Não</option>
+<option value="sim">Sim</option>
+<option value="não">Não</option>
                 </select>
-            </div>
-        </div>
 
-        <div class="form-group row" style="display: block">
-            <label for="tipocargo" class="col-sm-2 col-form-label">Profição:</label>
-            <div class="col-sm-10">
-                <select name="tipocargo" class="form-control" id="tipocargo">
+        <div id="cargo" style="display: none">
+            <label for="tipocargo" ">Profição:</label>
+                <select name="tipocargo" id="tipocargo">
                     <option value="0"></option>
 <?php
 $tipocargo = "SELECT * FROM tipocargo";
@@ -129,12 +102,9 @@ while($cargo = mysqli_fetch_assoc($resultadocargo)){
 ?>
 </select>
 </div>
-</div>
-
-        <div class="form-group row" style="display: none">
-            <label for="tipobeneficio" class="col-sm-2 col-form-label">Tipo de beneficio:</label>
-            <div class="col-sm-10">
-                <select name="tipobeneficio" class="form-control" id="tipobeneficio">
+      <div id="beneficio" style="display: none">
+            <label for="tipobeneficio" ">Tipo de beneficio:</label>
+                <select name="tipobeneficio" id="tipobeneficio">
                     <option value="0"></option>
 <?php
 $tipobeneficio = "SELECT * FROM tipobeneficio";
@@ -147,14 +117,14 @@ while($beneficio = mysqli_fetch_assoc($resultadobeneficio)){
 ?>
 </select>
 </div>
-</div>
-        <div class="form-group row">
-            <div class="col-sm-12 text-center">
-                <input class="btn btn-secondary" type="button" value="Cancelar" onclick="cancelar()">
-                <input class="btn btn-primary" type="submit" value="Salvar">
-            </div>
-        </div>
+
+        
+            
+                <input type="submit" value="Cancelar">
+                <input type="submit" value="Salvar">
+            
+        
     </form>
-</div>
+
 </body>
 </html>

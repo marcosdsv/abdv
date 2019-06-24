@@ -10,7 +10,7 @@ $email = strtolower(filter_input(INPUT_POST,"email"));
 $datanascimento = filter_input(INPUT_POST,"datanascimento");
 $tipodeficiencia = strtoupper(filter_input(INPUT_POST,"tipodeficiencia"));
 $tipoassociado = strtoupper(filter_input(INPUT_POST,"tipoassociado"));
-$trabalha = strtoupper(filter_input(INPUT_POST,"trabalha"));
+$tipocargo = strtoupper(filter_input(INPUT_POST,"trabalha"));
 $tipo = strtoupper(filter_input(INPUT_POST,"tipo"));
 //Inserindo o arquivo de conexão com o banco de dados.
 include_once "conectar.php";
