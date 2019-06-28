@@ -1,0 +1,4 @@
+CREATE TABLE tipoassociado(
+id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+tipoassociado VARCHAR(20) NOT NULL
+);

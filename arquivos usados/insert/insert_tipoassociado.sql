@@ -1,4 +1,4 @@
-insert into tipoassociado(tipoassociado)values('Fundador');
-insert into tipoassociado(tipoassociado)values('Benemérito');
-insert into tipoassociado(tipoassociado)values('Honorário');
-insert into tipoassociado(tipoassociado)values('Colaborador');
+insert into tipoassociado(tipoassociado)values('FUNDADOR');
+insert into tipoassociado(tipoassociado)values('BENEMÉRITO');
+insert into tipoassociado(tipoassociado)values('HONORÁRIO');
+insert into tipoassociado(tipoassociado)values('COLABORADOR');

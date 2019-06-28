@@ -1,0 +1,1 @@
+ALTER TABLE associados ADD CONSTRAINT fktipocargo FOREIGN KEY (id) REFERENCES tipocargo (id);

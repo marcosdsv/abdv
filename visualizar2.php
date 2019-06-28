@@ -27,8 +27,9 @@ include_once "menu.php";
 <th scope="col">Data de nascimento</th>
 <th scope="col">Tipo de deficiência</th>
 <th scope="col">Tipo de associado</th>
-<th scope="col">Trabalha</th>
-<th scope="col">Profição</th>
+<th scope="col">Profissão</th>
+<th scope="col">Beneficio</th>
+<th scope="col">Data de admissão</th>
 <th scope="col">Ação</th>
 </tr>
 </thead>
@@ -81,10 +82,11 @@ $u = substr($cpfmas, 9, 2);
 $cpf = $c.'.'.$p.'.'.$f.'-'.$u;
 $email = strtolower($dados['email']);
 $datanascimento = date('d/m/Y', strtotime($dados['datanascimento']));
-$tipodeficiencia = ucwords(strtolower($dados['tipodeficiencia']));
-$tipoassociado = ucwords(strtolower($dados['tipoassociado']));
-$trabalha = ucwords(strtolower($dados['trabalha']));
-$tipo = ucwords(strtolower($dados['tipo']));
+$tipodeficiencia = ucwords(strtolower($dados['fktipodeficiencia']));
+$tipoassociado = ucwords(strtolower($dados['fktipoassociado']));
+$tipocargo = ucwords(strtolower($dados['fktipocargo']));
+$tipobeneficio = ucwords(strtolower($dados['fktipobeneficio']));
+$dataadmissao = date('d/m/Y', strtotime($dados['dataadmissao']));
 ?>
 <tbody>
 <tr>
@@ -98,8 +100,9 @@ $tipo = ucwords(strtolower($dados['tipo']));
 <td><?php echo $datanascimento;?></td>
 <td><?php echo $tipodeficiencia;?></td>
 <td><?php echo $tipoassociado;?></td>
-<td><?php echo $trabalha;?></td>
-<td><?php echo $tipo;?></td>
+<td><?php echo $tipocargo;?></td>
+<td><?php echo $tipobeneficio;?></td>
+<td><?php echo $dataadmissao;?></td>
 		<td>
 		<a href="editarDados.php?id=<?=$dados['id']?>">Editar associado</a><br>
 		<a href="excluir.php?id=<?=$dados['id']?>"
